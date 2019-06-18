@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andrew.tipcalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/label_bill"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#DDDDDDDD"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Bill"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/amount_bill"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:hint="Enter Bill"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_bill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/label_bill" />
+
+    <TextView
+        android:id="@+id/label_tip_percent"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:background="#DDDDDDDD"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Tip (%)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/label_bill"
+        app:layout_constraintTop_toBottomOf="@+id/label_bill" />
+
+    <EditText
+        android:id="@+id/amount_tip_percent"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter Tip(%)"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_tip_percent"
+        app:layout_constraintEnd_toEndOf="@+id/amount_bill"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/amount_bill"
+        app:layout_constraintTop_toTopOf="@+id/label_tip_percent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/label_guest_number"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:background="#DDDDDDDD"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Guest(s)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/label_bill"
+        app:layout_constraintTop_toBottomOf="@+id/label_tip_percent" />
+
+    <EditText
+        android:id="@+id/amount_tip_per_guest"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter Guest(s)"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_guest_number"
+        app:layout_constraintEnd_toEndOf="@+id/amount_tip_percent"
+        app:layout_constraintStart_toStartOf="@+id/amount_tip_percent"
+        app:layout_constraintTop_toTopOf="@+id/label_guest_number" />
+
+    <View
+        android:id="@+id/red_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_marginTop="32dp"
+        android:background="#FF00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_guest_number" />
+
+    <TextView
+        android:id="@+id/label_tip"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:background="#DDDDDDDD"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Tip ($)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/label_guest_number"
+        app:layout_constraintTop_toBottomOf="@+id/red_line" />
+
+    <TextView
+        android:id="@+id/amount_tip"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:background="#40F0"
+        android:gravity="center"
+        android:textColor="#F00F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_tip"
+        app:layout_constraintEnd_toEndOf="@+id/amount_tip_per_guest"
+        app:layout_constraintTop_toTopOf="@+id/label_tip" />
+
+    <TextView
+        android:id="@+id/label_total"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:background="#DDDDDDDD"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Total"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/label_guest"
+        app:layout_constraintTop_toBottomOf="@+id/label_guest" />
+
+    <TextView
+        android:id="@+id/amount_total"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:background="#40F0"
+        android:gravity="center"
+        android:textColor="#F00F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_total"
+        app:layout_constraintEnd_toEndOf="@+id/guest_total"
+        app:layout_constraintStart_toStartOf="@+id/guest_total"
+        app:layout_constraintTop_toTopOf="@+id/label_total" />
+
+    <TextView
+        android:id="@+id/label_guest"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:background="#DDDDDDDD"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="Tip per Guest"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/label_tip"
+        app:layout_constraintTop_toBottomOf="@+id/label_tip" />
+
+    <TextView
+        android:id="@+id/guest_total"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        android:background="#40F0"
+        android:gravity="center"
+        android:textColor="#F00F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/label_guest"
+        app:layout_constraintEnd_toEndOf="@+id/amount_tip"
+        app:layout_constraintStart_toStartOf="@+id/amount_tip"
+        app:layout_constraintTop_toTopOf="@+id/label_guest" />
+
+
+
+</android.support.constraint.ConstraintLayout>
+
